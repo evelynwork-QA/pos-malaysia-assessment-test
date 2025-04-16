@@ -12,5 +12,5 @@ This repository contains a Postman collection for testing Pos Malaysia's API.
 3. Verify the responses.
 
 ## Author:
-Evelyn Loh
-lohwork@yahoo.com
+Evelyn Loh  
+[GitHub Profile](https://github.com/evelynwork-QA/pos-malaysia-assessment-test/)
