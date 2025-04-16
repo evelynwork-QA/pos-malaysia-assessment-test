@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "5ee7a311-016a-4a36-af53-ef6ffe532cfd",
+		"name": "Pos Malaysia API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38619371"
+	},
+	"item": [
+		{
+			"name": "List Countries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/countries",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get State by Postcode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"postCode\": \"55100\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"getStateByPostcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Shipping Rate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"country\": \"Malaysia\",\r\n\t\"postcodeFrom\": 55100,\r\n\t\"postcodeTo\": 35000,\r\n\t\"weight\": 1.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/price",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
